@@ -1,0 +1,31 @@
+//Spy number program
+
+class SpyNumber
+{
+	public static void main(String[] args) 
+	{
+		int num=1124;
+		int rem;
+		int product=1;
+		int sum=0;
+		int temp=num;
+		while(temp!=0) {
+			rem=temp%10;
+			sum=sum+rem;
+			temp=temp/10;
+		}
+		System.out.println("The sum of this number is: "+sum);
+		
+		while(num!=0) {
+			rem=num%10;
+			product=product*rem;
+			num=num/10;
+		}
+		System.out.println("The Product of the number is "+product);
+		if (sum==product) System.out.println("Number is Spy");
+		else System.out.println("The number is not spy number");
+		{
+		}
+	}
+	
+}
