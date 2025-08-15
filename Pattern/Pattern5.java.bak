@@ -1,0 +1,16 @@
+/*
+Q5. Write a program in Java to display the following pattern:
+5 4 3 2 1
+5 4 3 2
+5 4 3
+5 4
+5
+*/
+
+class Pattern5 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

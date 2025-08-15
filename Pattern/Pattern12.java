@@ -1,0 +1,28 @@
+/*
+Q12. Write the program in Java to display the following pattern:
+9
+7 9
+5 7 9
+3 5 7 9
+1 3 5 7 9
+*/
+
+class Pattern12 
+{
+	public static void main(String[] args) 
+	{ 
+		int num=9;
+		int x=num;
+		for(int i=1;i<=5;i++) 
+			{
+			 num=x;
+			for(int j=1;j<=i;j++,num=num+2) 
+				{
+				System.out.print(num+" ");			 
+			 
+			}
+			x=x-2;
+			System.out.println();
+		}
+	}
+}
