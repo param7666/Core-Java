@@ -1,0 +1,613 @@
+1>
+---------------------------------
+public class Sample01 {
+	public class Sample01 {
+	
+	public void m1() {
+		 System.out.println("HELLO NON STATIC METHOD");
+	}
+	public int m2() {
+		 Sample01 s=new Sample01();
+		 s.m1();
+		 return 10;
+	}
+	
+public static void main(String[] args) {
+	Sample01 s=new Sample01();
+	int result=s.m2();
+	System.out.println(result);
+	
+	
+}
+}
+}
+-------------------------------------------------------------------
+2>
+---------------------------------------
+public class Sample01 {
+	public void m1() {
+		 System.out.println("HELLO NON STATIC METHOD");
+	}
+	public int m2() {
+		 m1();
+		 return 10;
+	}
+	public int m3() {
+		 int result=m2();
+		 return result*result;
+	}
+	
+public static void main(String[] args) {
+	Sample01 s=new Sample01();
+	int result=s.m2();
+	System.out.println(result);
+	
+	
+}
+}
+---------------------------------------------------------------------
+3>
+----------------------------
+public class Sample01 {
+	public boolean m1(int number) {
+		 if(number%2==0) {
+			return true;
+		 }
+		 else {
+			  return false;
+		 }
+	}
+	public void m2(int number) {
+         Sample01 s=new Sample01();
+	 boolean result= s.m1(number);
+	 if(result) {
+		  System.out.println("Even");
+	 }
+	 else {
+		  System.out.println("Odd");
+	 }
+	}
+	public static void main(String args[])
+	{
+	Sample01 obj=new Sample01();
+	obj.m2(10);
+	
+	}
+
+}
+------------------------------------------------------------
+4>
+-----------------------------
+public class Sample01 {
+	 public boolean m1(int number1,int number2) {
+		  return (number1==number2);
+	 }
+	 public void m2(int number1,int number2) {
+		  if(m1(number1,number2)) {
+			  System.out.println("SAME");
+		  }
+		  else {
+			  System.out.println("dIFF");
+		  }
+	 }
+	public static void main(String args[])
+	{
+	Sample01 obj=new Sample01();
+	System.out.println(obj.m2(10, 10));
+	
+	
+	}
+
+}
+----------------------------------------------------------
+5>
+---------------------------
+public class Sample01 {
+	
+	public int m1(int number) {
+                Sample01 s=new Sample01();
+		int result=number;
+		 while(result==0) {
+			 result=s.m1(number-1);
+			  break;
+		 }
+		 return number;
+	}
+	public static void main(String args[])
+	{
+	Sample01 obj=new Sample01();
+	int result=obj.m1(3);
+
+	System.out.println(result);
+	
+	}
+
+}
+-------------------------------------------------------------
+6>
+-------------------------------
+What will be the output of the following Java program?
+
+public class Sample01 {
+	int func (int n)
+	{
+	int result;
+	System.out.println("hello");
+	result = func (n - 1);
+	return result;
+	}
+	public static void main(String args[])
+	{
+	Sample01 obj=new Sample01();
+	System.out.print(obj.func(12));
+	}
+
+}
+-----------------------------------------------------------------
+Program 7)
+-------------
+
+public class ClassA {
+
+	public void meth1() {
+		System.out.println("meth1() Called");
+
+		ClassA aObj = new ClassA();
+		aObj.meth2();
+	}
+
+	public void meth2() {
+		System.out.println("meth2() Called");
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Start");
+		ClassA aObj = new ClassA();
+		System.out.println("Java is Awesome");
+		aObj.meth1();
+		System.out.println("End");
+	}
+}
+
+==========================================================================
+
+Program 8)
+-------------
+public class ClassA {
+
+	void meth1() {
+		ClassA aObj = new ClassA();
+		System.out.println(10);
+		aObj.meth3();
+		System.out.println(20);
+	}
+
+	void meth2() {
+		System.out.println("Java is Awesome");
+	}
+
+	void meth3() {
+		ClassA aObj = new ClassA();
+		System.out.println(99 + 1);
+		aObj.meth2();
+		System.out.println(100 - 99);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Start");
+		ClassA aObj = new ClassA();
+		aObj.meth1();
+		System.out.println("End");
+	}
+}
+
+================================================================================
+
+Program 9)
+-------------
+
+public class ClassA {
+
+	void meth1() {
+		ClassA obj1 = new ClassA();
+		obj1.meth5();
+		int a = 10;
+		System.out.println(10);
+		System.out.println(54 + a);
+
+	}
+
+	void meth2() {
+		int a = 20;
+		System.out.println(78 - a);
+	}
+
+	void meth3() {
+		int a = 30;
+		ClassA obj1 = new ClassA();
+		System.out.println(89 + 1);
+		obj1.meth1();
+		System.out.println(10);
+	}
+
+	void meth4() {
+		int a = 10;
+		System.out.println(89);
+		System.out.println(85);
+		System.out.println(84);
+	}
+
+	void meth5() {
+
+		System.out.println(77);
+		ClassA obj1 = new ClassA();
+		obj1.meth2();
+		System.out.println(99);
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Start");
+		ClassA aObj = new ClassA();
+		aObj.meth3();
+		System.out.println("End");
+
+	}
+
+}
+
+==========================================================
+
+
+Program 10)
+-------------
+
+public class ClassA {
+
+	void meth1(int a, int b) {
+
+		System.out.println("a value: " + a);
+		System.out.println("b value: " + a);
+		System.out.println("Addition: " + (a + b));
+	}
+
+	void meth2(int a, String s) {
+		System.out.println("a value: " + a);
+		System.out.println("Substraction : " + (a - 100));
+		System.out.println("s value: " + s);
+	}
+
+	public static void main(String[] args) {
+		ClassA aobj = new ClassA();
+		aobj.meth1(99, 1);
+		aobj.meth2(500,"java is awesome");
+	}
+
+}
+
+============================================================================
+Program 11)
+-------------
+
+public class ClassA {
+
+	void meth1(int a, String s) {
+
+		System.out.println(a+a);
+		System.out.println("a");
+		System.out.println('a');
+		System.out.println(a);
+		System.out.println("s: "+s);
+	}
+
+	void meth2(int a, int b) {
+                ClassA a=new ClassA();
+		System.out.println(a*a);
+		System.out.println(b);
+		a.meth4("java is awesome");
+		a.meth3('A',100);
+		System.out.println(a-b);
+	}
+	
+	void meth3(char c, int a) {
+		System.out.println(c);
+		System.out.println('c');
+		System.out.println(a);
+	}
+	 void meth4(String s) {
+                ClassA a=new ClassA();
+                a.meth1(10, "Hello world");	
+		System.out.println(s);
+		}
+
+	public static void main(String[] args) {
+		System.out.println("start");
+                ClassA a=new ClassA();
+		a.meth2(5, 10);
+		System.out.println("End");
+	}
+
+}
+
+=========================================================================
+
+Program 12)
+-------------
+
+public class ClassA {
+
+	int meth1(int a,int b) {
+		System.out.println("meth1() Called");
+		System.out.println("a: "+a);
+		System.out.println("b: "+b);
+		return 500;
+	}
+
+	public static void main(String[] args) {
+		int x=500;
+		System.out.println("Start");
+		System.out.println("java is awesome");
+		ClassA aobj = new ClassA();
+		int y=aobj.meth1(1, 99);
+		System.out.println("x: "+x);
+		System.out.println("y: "+y);
+		System.out.println("End");
+	}
+
+}
+=========================================================================
+
+Program 13)
+-------------
+public class ClassA {
+
+	int meth1(int x,int y) {
+		System.out.println("meth1() Called");
+		return x+y;
+	}
+	int meth2(int x) {
+		System.out.println("meth2() Called");
+		return x*x;
+	}
+	
+	public static void main(String[] args) {
+		ClassA aobj = new ClassA();
+		System.out.println(aobj.meth1(10, 20)+aobj.meth2(2));
+	}
+
+}
+
+=========================================================================
+
+Program 14)
+-------------
+
+public class ClassA {
+
+	String meth1(int x) {
+		System.out.println(x);
+		return "java";
+	}
+	int meth2(int x,int y,int z) {
+		System.out.println("meth2() Called");
+		return (x*y)-z;
+	}
+	int meth3(char c)
+	{
+		System.out.println("meth3() called");
+		System.out.println("c: "+c);
+		System.out.println(c++);
+		System.out.println(++c);
+		System.out.println(c+1);
+		return 100;
+	}
+	public static void main(String[] args) {
+		ClassA aobj = new ClassA();
+		System.out.println(aobj.meth1(100)+"is awesome");
+		int val=aobj.meth2(5, 10, 50)+aobj.meth3('A')+5;
+		System.out.println("val: "+val);
+	}
+
+}
+
+=========================================================================
+
+
+Program 15)
+-------------
+
+public class ClassA {
+
+	int meth1() {
+		System.out.println("hii");
+		return new ClassA().meth2()+10;
+	}
+
+	int meth2() {
+		System.out.println("Hello");
+		return new ClassA().meth3()+20;
+	}
+	
+	int meth3() {
+		
+		System.out.println("java is awesome");
+		return 150;
+	}
+	 
+
+	public static void main(String[] args) {
+		System.out.println(new ClassA().meth1()+new ClassA().meth3());
+	}
+
+}
+======================================================================================
+
+
+Program 16)
+-------------
+public class ClassA {
+
+	int meth1(int x,int y) {
+		System.out.println("hi");
+		return x+y;
+	}
+	int meth2() {
+		System.out.println("meth2() Called");
+		return 1;
+	}
+	int meth3()
+	{
+		System.out.println("meth3() called");
+		return 99;
+	}
+	public static void main(String[] args) {
+		ClassA aobj = new ClassA();
+		
+		System.out.println(aobj.meth1(aobj.meth2(), aobj.meth3()));
+	}
+
+}
+
+
+=======================================================================================
+Program- 17
+---------------------------------
+public class ClassB {
+
+	void meth1() {
+		System.out.println(10);
+		System.out.println(64);
+		System.out.println("End");
+		
+	}
+	int meth2(int a,int b,int c) {
+		ClassB bobj = new ClassB();
+		bobj.meth5(100,"java is awesome");
+		System.out.println(5);
+		return a-b;
+	}
+	String meth3(String s,int b,int d)
+	{
+		System.out.println(b+d);
+		return s;
+	}
+	int meth4(int c,int k)
+	{
+		System.out.println(k);
+		ClassB bobj = new ClassB();
+		int result = bobj.meth2(50,50,50);
+		System.out.println(result);
+		return k+10;
+	}
+
+	String meth5(int a,String c)
+	{
+		System.out.println(a+a);
+		ClassB bobj = new ClassB();
+		bobj.meth3("Hii", 15, 10);
+		System.out.println(5);
+		return c;
+	}
+	public static void main(String[] args) {
+		ClassB bobj = new ClassB();
+		System.out.println("Start");
+		int result = bobj.meth4(20, 10);
+		System.out.println(result);
+		bobj.meth1();
+	}
+
+}
+
+===============================================================================
+Program-18
+------------------------
+public class ClassB {
+
+	int meth1(int a,int b,char c) {
+		System.out.println(c);
+		ClassB bobj = new ClassB();
+		int result=bobj.meth2("java", 100, 'Y');
+		return 10+a+result;
+		
+	}
+	int meth2(String s,int b,int c) {
+		
+		System.out.println(s);
+		System.out.println(c);
+		return 20;
+	}
+	
+	public static void main(String[] args) {
+		ClassB bobj = new ClassB();
+		int result = bobj.meth1(10, 20, 'X');
+		System.out.println(result);
+	}
+
+}
+
+
+
+===================================================================
+Program-19
+________________________________
+public class ClassA {
+
+	String meth1(int a,int b) {
+		System.out.println(10);
+		System.out.println((54+a)-b);
+		ClassA aobj = new ClassA();
+		int value=aobj.meth5();
+		System.out.println(value);
+		return "java";
+		
+	}
+	
+	int meth2(int a) {
+		System.out.println(75);
+		int b=5;
+		System.out.println(b-a);
+		return (5*5)-b;
+	}
+	void meth3()
+	{
+		System.out.println("Start");
+		ClassA aobj = new ClassA();
+		String msg=aobj.meth4();
+		System.out.println(msg);
+		System.out.println(40);
+	}
+	public String meth4() {
+		System.out.println("Today is Thrusday");
+		ClassA aobj = new ClassA();
+		return aobj.meth1(4, 8);
+	}
+	public int meth5() {
+		ClassA aobj = new ClassA();
+		System.out.println(99);
+		return aobj.meth2(5);
+	}
+	public static void main(String[] args) {
+		ClassA aobj=new ClassA();
+		aobj.meth3();
+	}
+
+}
+
+
+===================================================================
+Program-20
+-----------------------------
+Write a java program to check the number is prime or not by creating the method and 
+by checking the requirement 
+
+Method name: checkPrime 
+Method type: non static 
+Method return type : Boolean 
+Method parameter : one parameter of int type 
+
+get the return result back to the calling place and based on the return result 
+print the number is prime or not 
+
+if true result back from the method "then the number is prime"
+else " not prime".
+
