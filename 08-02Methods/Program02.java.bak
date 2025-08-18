@@ -1,0 +1,37 @@
+public class Program02 
+{
+	public static void acceptDetailsAndSubmit(String StudentName, long rollNo, String schoolRegNo, String schoolName,char gender, String citizenship, String board) {
+		Public01 obj=new Public01();
+		int math=0;
+		int science=0;
+		int english=0;
+		int ss=0;
+		int phyEdu=0;
+		if(schoolRegNo.equals("CBCE01-100")&& citizenship.equals("india") && board.equals("CBSE")) {
+			math=90;
+			science=85;
+			english=50;
+			ss=90;
+			phyEdu=100;
+			calculateGrade(math,science,english,ss,phyEdu)
+			
+		}
+	}
+	public char calculateGrade(int math, int science, int english,int ss, int phyEdu) {
+		int result=(math+science+english+ss+phyEdu)/5;
+		char grade;
+		if(result>80&&result<=100) grade='A';
+		else if(result>60&&result<=80) grade='B';
+		else if(result>40 && result<=60) grade='C';
+		else grade='F';
+		
+		return grade;
+	}
+	public static void displayDetails(int math, int science, int english, int ss, int phyEdu, char grade) {
+		
+	}
+	public static void main(String[] args) 
+	{
+		
+	}
+}

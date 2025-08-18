@@ -1,0 +1,36 @@
+ public class Program01 
+{
+	public static void assingDetails(String name, int totalRun, int jersyNo, int matches, String sportsName, String countryName){
+		int average=0;
+		if(totalRun>0 && jersyNo>0) {
+			 
+		}else if( sportsName.equals("cricket")){
+			
+			average=totalRun/matches;
+			displayDetails(name,totalRun,jersyNo,matches,average);
+			
+			 
+		}
+			
+		 else{
+			System.out.println("This app only for the cricketer");
+			 
+		}
+		
+		 
+	}
+	public static void displayDetails(String name, int totalRun,int jersyNo, int matches, int average){
+		
+		System.out.println("The name of the player "+name);
+		System.out.println("The Total run "+totalRun);
+	     System.out.println("the Jesryno "+jersyNo);
+		 System.out.println("the matches played "+matches);
+		 System.out.println("The Averge "+average);
+	}
+	
+	public static void main(String[] args) 
+	{
+		Program01.assingDetails("virat",400,18,5,"cricket","india");
+		
+	}
+}
