@@ -1,0 +1,15 @@
+class SunnyNumber 
+{
+	public static void main(String[] args) 
+	{
+		int num=80;
+		int add=num+1;
+		for(int i=1;i<=add;i++) {
+			if((i*i)==add) {
+				System.out.println("This is Sunny number");
+				break;
+			}
+		}
+		System.out.println("This is not a sunny Number");
+	}
+}
